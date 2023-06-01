@@ -11,28 +11,28 @@ received an email.
 Tools used: Thunderbird, unzip, exiftool, file, CyberChef
 
 1. What is the email service used by the malicious actor?
-emkei.cz
+Answer: emkei.cz
 when we see the "Recieved from" of the email, we can see that it was from emkei.cz
 
 2. what is the Reply-To email address?
-ngeja3921@pashter.com
+Answer: negeja3921@pashter.com
 when we use the Thunderbird, we can see the Reply to section of the email, you cannot see it
 it is located in the "Reply-To" section of the email header
 
 3. What is the filetype of the recieved attachment which helped to continue the investigation?
-.zip
+Answer: .zip
 once the attachment PuzzleToCocanda.pdf is downloaded, it seemed to be a .pdf file but upon running the
 file command on linux terminal, the result was it was a .zip file
 
 4. What is the name of the malicious actor?
-Pestero Negeja
+Answer: Pestero Negeja
 after unzipping the seemingly .pdf file (which is weird tbh) 
 we are presented with three file namely DaughtersCrown, a .jpg file, GoodJobMajor, a real .pdf file, 
 and Money.xlsx, a .xlsx file. Running the exiftool command on GoodJobMajor, we can see the
 Author included in the metadata
 
 5. What is the location of the attacker in this Universe?
-The Martian Colony, Beside Interplanetary Spaceport.
+Answer: The Martian Colony, Beside Interplanetary Spaceport.
 credits to luisrodrigues154 source: https://github.com/luisrodrigues154/Cyber-Security/blob/master/BlueTeamLabs/PlanetsPrestige/notes.md 
 Scanning the file Money.xlsx using binwalk, we can see the list of the zip archive as listed below 
 DECIMAL       HEXADECIMAL     DESCRIPTION
@@ -56,6 +56,6 @@ upon extracting the files, we can see that they are bunch of xml file, but upon 
 there is a string encrypted in base64 "VGhlIE1hcnRpYW4gQ29sb255LCBCZXNpZGUgSW50ZXJwbGFuZXRhcnkgU3BhY2Vwb3J0Lg==" upon 
 decoding the text using Cyberchef in base64 we can see the location The Martian Colony, Beside Interplanetary Spaceport.
 6. What could be the probable C&C domain to control the attacker's autonomous bots?
-pashter.com
+Answer: pashter.com
 credits to luisrodrigues154 source: https://github.com/luisrodrigues154/Cyber-Security/blob/master/BlueTeamLabs/PlanetsPrestige/notes.md
 Well, i tried all the domains in the .eml file and found it was the attacker's email domain
