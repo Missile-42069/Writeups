@@ -1,0 +1,32 @@
+Meta Write-up
+By: Missile_42069
+
+Scenario:
+The attached images were posted by a criminal on the run, with the caption 
+"I'm roaming free. You will never catch me". We believe you can assist us in proving him wrong. 
+
+Tools used: exiftool, yandex reverse image
+
+What is the camera model?
+Answer: Canon EOS 550D
+
+After extracting the 2 pictures from the zip file, I ran the exiftool command on uploaded_1.JPG then search for the keyword
+"Camera keyword" then found the Answer
+
+When was the picture taken?
+Answer: 2021:11:02 13:20:23
+
+After checking the properties of the image, in the "Date Taken" field, the answer is found
+
+What does the comment on the first image says?
+Answer: relying on altered metadata to catch me?
+
+While reading the output the from the exiftool, I found the answer in the "Comment" field
+
+
+Where could the criminal be?
+Answer: Kathmandu
+
+After reverse image searching the upload_1.JPG in yandex.com I found this website 
+https://commons.wikimedia.org/wiki/File:Taleju_temple_ktm_gp7.JPG. According to the site
+the temple is found in Kathmandu, Nepal hence the answer
